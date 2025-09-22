@@ -1,7 +1,7 @@
 # 📝 Task Manager
 
-A full-stack task management application built with *React, Node.js, Express, and MongoDB*.  
-Includes authentication, user & task management, and real-time notifications.
+A full-stack *Task Management Application* built with *React, Node.js, Express, and MongoDB*.  
+Includes authentication, user & task management, settings, and real-time notifications for task assignments.
 
 ---
 
@@ -9,19 +9,19 @@ Includes authentication, user & task management, and real-time notifications.
 - *Frontend:* React (React Router, Context API, Axios)
 - *Backend:* Node.js, Express
 - *Database:* MongoDB (Mongoose ODM)
-- *Auth:* JWT (JSON Web Tokens)
-- *Styling:* CSS (dark theme, custom components)
-- *Other:* Nodemon, CORS, dotenv
+- *Authentication:* JWT (JSON Web Tokens)
+- *Styling:* CSS (dark theme + custom components)
+- *Other Tools:* Nodemon, CORS, dotenv
 
 ---
 
 ## ⚡ Features
-- 🔐 *Authentication* (Register/Login with JWT)  
-- 👥 *User Management* (search, edit, delete, roles)  
-- ✅ *Tasks CRUD* (create, update, delete, assign/unassign)  
-- 🔔 *Notifications* (task assignment triggers notification)  
-- ⚙ *Settings* (profile info, password change, theme toggle)  
-- 📊 *Dashboard* (task stats, filters, search)
+- 🔐 *Authentication* – Register/Login with JWT  
+- 👥 *User Management* – Search, edit, delete, roles  
+- ✅ *Tasks* – Create, update, delete, assign/unassign  
+- 🔔 *Notifications* – Task assignment triggers notifications  
+- ⚙ *Settings* – Profile info, password change, theme toggle  
+- 📊 *Dashboard* – Task stats with filters & search  
 
 ---
 
