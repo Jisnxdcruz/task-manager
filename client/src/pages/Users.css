@@ -1,0 +1,50 @@
+.users-root { display:flex; min-height:100vh; background:#0b0e13; color:#e7ebf0; }
+.users-main { flex:1; padding:20px 28px; position:relative; }
+
+.bg-aurora{
+  position:absolute; inset:0;
+  background: radial-gradient(40% 30% at 20% 20%, rgba(91,140,255,.12), transparent 60%),
+              radial-gradient(35% 30% at 80% 40%, rgba(123,92,255,.10), transparent 60%);
+  pointer-events:none; z-index:0;
+}
+
+.u-header{ display:flex; justify-content:space-between; align-items:center; margin-bottom:18px; z-index:1; position:relative; }
+.u-header .right{ display:flex; gap:10px; align-items:center; }
+
+.inp{ padding:10px 12px; border-radius:10px; border:1px solid rgba(255,255,255,.1); background:#101726; color:#fff; }
+.inp.search{ width:240px; }
+.inp.sel{ min-width:130px; }
+
+.toast{ background:rgba(255,255,255,.08); padding:6px 10px; border-radius:10px; }
+
+.u-card{
+  background:#111723; border:1px solid rgba(255,255,255,.08);
+  border-radius:14px; padding:16px 18px; position:relative; z-index:1;
+}
+
+.u-top{ display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; }
+.chip{ font-size:.85rem; color:#cfd7e4; }
+
+.table-wrap{ overflow:auto; }
+.tbl{ width:100%; border-collapse:separate; border-spacing:0 10px; }
+.tbl thead th{ text-align:left; font-weight:600; color:#cfd7e4; padding:8px 10px; }
+.tbl tbody tr{ background:#0f1522; border:1px solid rgba(255,255,255,.06); }
+.tbl tbody td{ padding:10px; border-top:1px solid rgba(255,255,255,.06); }
+.tbl tbody tr:first-child td{ border-top:none; }
+.tbl .right{ text-align:right; }
+
+.row-actions{ display:flex; justify-content:flex-end; gap:8px; }
+.mini{ padding:6px 10px; border:none; border-radius:8px; background:#1a2333; color:#e7ebf0; cursor:pointer; }
+.mini.ok{ background:#256d3f; }
+.mini.danger{ background:#8b1e2b; }
+
+.pill{ padding:6px 10px; border-radius:999px; font-size:.85rem; background:#1a2333; }
+.pill.ok{ background:#1f5235; }
+.pill.warn{ background:#61302f; }
+.pill.role.user{ background:#1a2333; }
+.pill.role.manager{ background:#233149; }
+.pill.role.admin{ background:#39234a; }
+
+.pager{ display:flex; gap:10px; align-items:center; justify-content:center; margin-top:12px; }
+.pager button{ padding:6px 10px; border:none; border-radius:8px; background:#1a2333; color:#e7ebf0; cursor:pointer; }
+.pager button:disabled{ opacity:.6; cursor:default; }

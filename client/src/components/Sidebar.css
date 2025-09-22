@@ -1,0 +1,69 @@
+:root{
+  --bg:#0b0e13;
+  --panel:#0e1420;
+  --text:#e7ebf0;
+  --muted:#9aa4b2;
+  --primary:#5b8cff;
+  --primary-2:#7b5cff;
+}
+
+.side-root{
+  position:sticky; top:0; height:100vh;
+  width:240px; flex:0 0 240px;
+  display:flex; flex-direction:column;
+  background:linear-gradient(180deg,#0b0e13 0%, #0b0e13 60%, #0d1118 100%);
+  border-right:1px solid rgba(255,255,255,.06);
+  padding:14px 12px;
+  z-index:5;
+}
+
+.side-brand{
+  display:flex; align-items:center; gap:10px;
+  color:var(--text); font-weight:700; letter-spacing:.4px;
+  padding:10px 10px 14px; margin-bottom:6px;
+}
+.side-brand .dot{
+  width:12px; height:12px; border-radius:50%;
+  background:linear-gradient(135deg,var(--primary),var(--primary-2));
+  box-shadow:0 0 14px rgba(91,140,255,.8);
+}
+.side-brand .word{opacity:.9}
+
+.side-menu{
+  display:flex; flex-direction:column; gap:6px;
+  padding:6px 4px; flex:1;
+}
+
+.side-item{
+  display:flex; align-items:center; gap:10px;
+  padding:10px 12px; border-radius:10px;
+  color:var(--muted); text-decoration:none;
+  transition:background .2s, color .2s, transform .1s;
+}
+.side-item .ico{opacity:.8; width:22px; text-align:center}
+.side-item:hover{ background:#0f1623; color:#cfd7e4 }
+.side-item.active{
+  background:linear-gradient(135deg, rgba(91,140,255,.16), rgba(123,92,255,.14));
+  color:var(--text); font-weight:600;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.08);
+}
+
+.side-foot{
+  padding:10px 8px 4px;
+  border-top:1px solid rgba(255,255,255,.06);
+}
+.logout{
+  width:100%; padding:10px 12px; border:none; border-radius:10px;
+  background:#1a2333; color:#eaeef5; cursor:pointer; font-weight:600;
+  transition:filter .15s, transform .1s;
+}
+.logout:hover{ filter:brightness(1.05) }
+.logout:active{ transform:translateY(1px) }
+
+/* responsive: collapse width on very small screens */
+@media (max-width: 860px){
+  .side-root{ width:70px; flex-basis:70px; padding:12px 8px }
+  .side-item span:nth-child(2), .side-brand .word, .logout{ display:none }
+  .side-item{ justify-content:center }
+  .side-foot{ border-top:none; padding:8px 0 0 }
+}

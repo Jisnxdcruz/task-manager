@@ -1,0 +1,109 @@
+:root{
+  --bg:#0b0e13;
+  --panel:#0e1420;
+  --panel-2:#0c111b;
+  --text:#e7ebf0;
+  --muted:#9aa4b2;
+  --line:rgba(255,255,255,.08);
+  --primary:#5b8cff;
+  --primary-2:#7b5cff;
+  --ok:#48d597;
+  --warn:#f0b55a;
+  --danger:#ef7171;
+}
+
+.tasks-root{display:flex; min-height:100vh; background:var(--bg); color:var(--text)}
+.tasks-main{
+  position:relative; flex:1; padding:22px; overflow:auto;
+  background:radial-gradient(1200px 600px at 70% 30%, rgba(123,92,255,.08), transparent 60%),
+             radial-gradient(800px 500px at 30% 70%, rgba(91,140,255,.08), transparent 60%);
+}
+.bg-aurora{position:absolute; inset:0; pointer-events:none; filter:blur(40px) saturate(115%); opacity:.55}
+
+.t-header{display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:14px}
+.t-header h1{margin:0; font-size:26px}
+.t-header .right{display:flex; gap:8px; align-items:center}
+
+.inp{
+  background:#0b121b; border:1px solid #1c2432; color:var(--text);
+  padding:10px 12px; border-radius:10px; outline:none; min-width:0;
+}
+.inp:focus{border-color:var(--primary); box-shadow:0 0 0 4px rgba(91,140,255,.16)}
+.inp.sm{padding:8px 10px; border-radius:8px}
+.inp.search{width:240px}
+.inp.sel{padding-right:28px}
+
+.toast{background:#0d1622; border:1px solid #152033; padding:8px 10px; border-radius:10px; color:#d4d9e1}
+
+.create{
+  display:grid; grid-template-columns: 1.2fr 1.4fr .7fr .7fr auto;
+  gap:10px; margin:10px 0 16px;
+}
+.create .btn{
+  border:none; border-radius:10px; padding:10px 14px; font-weight:700; color:#fff;
+  background:linear-gradient(135deg,var(--primary),var(--primary-2));
+  box-shadow:0 10px 24px rgba(91,140,255,.28); cursor:pointer;
+}
+
+.t-card{
+  background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.04));
+  border:1px solid var(--line); border-radius:16px; padding:14px; position:relative;
+}
+.t-top{display:flex; align-items:center; justify-content:space-between; margin-bottom:6px}
+.t-top h2{margin:0; font-size:18px}
+
+.chip{
+  background:#0d1622; border:1px solid #16243a; color:#c8d5e8;
+  padding:6px 10px; border-radius:999px; font-size:12px;
+}
+
+.table-wrap{overflow:auto; border-radius:12px; border:1px solid var(--line)}
+.tbl{width:100%; border-collapse:separate; border-spacing:0}
+.tbl thead th{
+  text-align:left; font-weight:700; color:#cbd5e1;
+  background:#0d1522; position:sticky; top:0; padding:10px 12px; border-bottom:1px solid var(--line);
+}
+.tbl tbody td{padding:10px 12px; border-bottom:1px solid var(--line)}
+.tbl tbody tr:hover{background:#0b121b}
+
+.pill{
+  display:inline-flex; align-items:center; justify-content:center;
+  border-radius:999px; padding:6px 10px; font-weight:700; font-size:12px;
+  background:#0f1726; border:1px solid #23324a; color:#d8e4ff;
+}
+.pill.low{ background:#16251c; border-color:#1f3a28; color:#cdefd9 }
+.pill.medium{ background:#202424; border-color:#2a3232; color:#e7eeee }
+.pill.high{ background:#2b1a1c; border-color:#4a2329; color:#ffd6dc }
+
+.badge{
+  border:none; border-radius:999px; padding:6px 10px; font-weight:800; font-size:12px;
+  cursor:default; background:#151c2b; color:#d6e4ff; border:1px solid #22324a;
+}
+.badge.ok{ background:#11261d; border-color:#1e5943; color:#aef0ce }
+.badge.warn{ background:#2a2417; border-color:#5a4a20; color:#ffe3b0 }
+.badge.muted{ background:#131821; border-color:#2a3446; color:#a9b7d0 }
+
+.row-actions{display:flex; gap:8px; justify-content:flex-end}
+.mini{
+  border:1px solid #25344d; background:#0f1624; color:#cfe0ff;
+  border-radius:8px; padding:6px 10px; cursor:pointer; font-weight:700;
+}
+.mini:hover{border-color:#385281}
+.mini.ok{background:#14261f; border-color:#2b7a5c; color:#bff3d6}
+.mini.danger{background:#2a1a1a; border-color:#6a2a2a; color:#ffd7d7}
+
+.empty{padding:30px; text-align:center; color:#aab6c9}
+
+.pager{
+  margin-top:10px; display:flex; gap:10px; align-items:center; justify-content:flex-end;
+}
+.pager button{
+  border:1px solid #23324a; background:#0e1624; color:#d7e6ff; border-radius:8px; padding:8px 12px; cursor:pointer;
+}
+.pager button:disabled{opacity:.45; cursor:not-allowed}
+
+@media (max-width: 980px){
+  .t-header .right{flex-wrap:wrap}
+  .create{grid-template-columns: 1fr}
+  .inp.search{width:100%}
+}

@@ -1,0 +1,114 @@
+/* container holds the bell and dropdown */
+.notification-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* bell button */
+.notification-bell {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  position: relative;
+  color: #eee;
+  transition: transform 0.1s ease;
+}
+
+.notification-bell:hover {
+  transform: scale(1.1);
+}
+
+/* red unread badge */
+.notification-bell .badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background: crimson;
+  color: white;
+  border-radius: 50%;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 2px 6px;
+}
+
+/* dropdown panel */
+.notification-panel {
+  position: absolute;
+  top: 36px;
+  right: 0;
+  width: 320px;
+  max-height: 400px;
+  overflow-y: auto;
+  background: #1e1e1e;
+  color: #eee;
+  border: 1px solid #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  z-index: 1000;
+  animation: fadeIn 0.15s ease-out;
+}
+
+/* simple fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* panel header */
+.notification-panel .panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-bottom: 1px solid #333;
+  background: #2a2a2a;
+}
+
+.notification-panel .panel-header button {
+  background: none;
+  border: none;
+  font-size: 12px;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.notification-panel .panel-header button:hover {
+  color: #fff;
+}
+
+/* list + items */
+.notification-panel ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.notification-panel li {
+  padding: 10px 12px;
+  border-bottom: 1px solid #2d2d2d;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.notification-panel li:hover {
+  background: #2c2c2c;
+}
+
+.notification-panel li.unread {
+  background: #2a2a2a;
+  font-weight: bold;
+}
+
+.notification-panel li.read {
+  background: transparent;
+  color: #aaa;
+}
+
+.notification-panel li.empty {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+  font-style: italic;
+}
